@@ -30,6 +30,11 @@ var answer_element;
 var label1;
 var label5;
 
+var format_key = function(i)
+{
+    return keys[i].replace('_', ' ');
+};
+
 var next_question = function() {
 
     // TODO access value of answer_element correctly
@@ -45,7 +50,7 @@ var next_question = function() {
             // finished
         }
 
-        category_text = keys[category_i];
+        category_text.html(format_key(category_i));
     }
     current_q = questions[keys[category_i]][question_i];
     question_text.html(current_q.q);
@@ -70,7 +75,7 @@ var init = function()
     label1 = $("#l1");
     label5 = $("#l5");
 
-    category_text.html(keys[category_i]);
+    category_text.html(format_key(category_i));
     console.log(questions[keys[category_i]][question_i].q);
     console.log(question_text);
     question_text.html(questions[keys[category_i]][question_i].q);
