@@ -1,6 +1,22 @@
 var questions = {
-    trade: [{q:'Should we build a wall?', t1:0, c1:8, t5:10, c5:0}, {q:'Question2?', t1:0, c1:8, t5:10, c5:0}],
-    womens_rights: [{q:'Question3?', t1:0, c1:8, t5:10, c5:0}, {q:'Abortion?', t1:0, c1:8, t5:10, c5:0}]
+    Economy: [{q:'The federal government should increase minimum wage...', l1:'not at all', l5:'to 15 dollars', t1:3, c1:0, t5:7, c5:10},
+        {q:'I support the Trans-Pacific Partnership.', t1:10, c1:7, t5:0, c5:3},
+        {q:'Corporate tax must be...', l1:'lowered', l5: 'raised', t1:10, c1:0, t5:0, c5:10}],
+    Social_issues: [{q:'Abortion should be...', l1:'illegal in all cases, including rape and incest', l5:'legalized', t1:7, c1:1, t5:3, c5:9},
+    {q:'The federal government should mandate universal background checks for all gun purchasers', t1:8, c1:0, t5:1, c5:9},
+    {q:'The federal government should mandate body cameras on all police officers', t1: 8, c1: 0, t5: 2, c5: 10}],
+    Foreign_policy: [{q:'The U.S. should declare war on ISIS and send in ground troops.', t1: 0, c1: 2, t5: 10, c5: 8},
+    {q:'When considering foreign conflicts, the U.S. should...', l1: 'attempt to maintain balances of power.', l5: 'only become involved for self-defense', t1: 0, c1: 10, t5: 10, c5: 0},
+{q:'The government should _______ foreign aid spending.', l1: 'decrease', l5: 'increase', t1: 10, c1: 0, t5: 0, c5: 10}],
+Immigration: [{q:'The federal government should deal with illegal immigrants without criminal records by...', l1: 'creating a path to citizenship', l5: 'deporting them', t1: 0, c1: 0, t5: 10, c5: 0},
+    {q:"Immigrants of a certain race or religion pose a threat to the country's domestic welfare and should be banned accordingly.", t1: 10, c1: 0, t5: 0, c5: 10},
+    {q:'We should increase restrictions on border security.', t1:0, c1:10, t5:10, c5:0}],
+Healthcare: [{q:'The government should regulate prices for...', l1:'no drugs', l5:'all prescription drugs', t1: 0, c1: 0, t5: 10, c5: 10},
+    {q:'The Affordable Care Act should be repealed.', t1:0, c1:10, t5:10, c5: 0 }],
+    Environment: [{q:'The government should provide tax credits and subsidies for companies seeking alternate energy sources.', t1:10, c1:0, t5:0, c5:10},
+    {q:'The government should increase environmental regulations that mitigate the effects of climate change.', t1: 0, c1:0, t5:10, c5:10}],
+    Education: [{q:'The government should decrease interest rates on student loans.', t1:0, c1:10, t5:10, c5:0},
+    {q:'Education standards should be universal across the country.', t1:0, c1:10, t5:10, c1:0}]
 };
 var keys = Object.keys(questions);
 
