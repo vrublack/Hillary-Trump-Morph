@@ -18,8 +18,17 @@
     <br>
 
     <div style="text-align:center;">
-    <input id="answer-element" type="range" min="1" max="5" step="1" style="width:200px; display:inline-block">
-    <br>
+
+        <table style="width: 100%;"> <tbody>
+        <tr>
+            <td style="float: right; margin-right: 15px;"><div id="l1">Strongly disagree</div></td>
+            <td style="width: 10%;"><input id="answer-element" type="range" min="1" max="5" step="1" style="width:200px;"></td>
+            <td style="float: left; margin-left: 15px;"><div id="l5">Strongly agree</div></td>
+        </tr>
+        </tbody> </table>
+
+
+        <br>
     <br>
     <input type="button" onclick="next_question()" id="next-button" value="Next">
 </div>

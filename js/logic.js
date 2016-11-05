@@ -27,6 +27,8 @@ var current_q = questions[keys[category_i]][question_i];
 var question_text;
 var category_text;
 var answer_element;
+var label1;
+var label5;
 
 var next_question = function() {
 
@@ -47,6 +49,17 @@ var next_question = function() {
     }
     current_q = questions[keys[category_i]][question_i];
     question_text.html(current_q.q);
+
+    if (current_q.hasOwnProperty('l1'))
+        label1.html(current_q.l1);
+    else
+        label1.html('Strongly disagree');
+
+    if (current_q.hasOwnProperty('l5'))
+        label5.html(current_q.l5);
+    else
+        label5.html('Strongly agree');
+
 };
 
 var init = function()
@@ -54,6 +67,8 @@ var init = function()
     question_text = $('#question-text');
     category_text = $('#category-text');
     answer_element = $('#answer-element');
+    label1 = $("#l1");
+    label5 = $("#l5");
 
     category_text.html(keys[category_i]);
     console.log(questions[keys[category_i]][question_i].q);
