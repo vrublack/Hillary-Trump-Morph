@@ -11,13 +11,11 @@
 </head>
 <body>
     <p id="question-text" class="text-center">Question</p>
-	<div class="center-block">
-		<input type="radio" id="answer-element" name="radio" value="response1"><label for="response1">Response 1</label>
-		<input type="radio" name="radio" value="response2"><label for="response2">Response 2</label>
-		<input type="radio" name="radio" value="response3"><label for="response3">Response 3</label>
-		<input type="radio" name="radio" value="response4"><label for="response4">Response 4</label>
-		<input type="radio" name="radio" value="response5"><label for="response5">Response 5</label>
-	</div>
+	
+	<input id="answer-element" type="range" min="1" max="5" step="1" style="width:200px;">
+	
+	<input type="button" onclick="next_question()" id="next-button" value="Next">
+	
 	<img src="images/2013-05-22 16.27.48.jpg" class="center-block img-responsive" alt="image">
     <script src="js/bootstrap.js"></script>
     <script src="js/bootstrap.min.js"></script>
