@@ -13,14 +13,17 @@
 </head>
 <body onload="init()">
 
+    <br>
     <p id="question-text" class="text-center">Question</p>
-	
-	<input id="answer-element" type="range" min="1" max="5" step="1" style="width:200px;">
-	
-	<input type="button" onclick="next_question()" id="next-button" value="Next">
-	
-	<img src="images/2013-05-22 16.27.48.jpg" class="center-block img-responsive" alt="image">
-    <script src="js/bootstrap.js"></script>
-    <script src="js/bootstrap.min.js"></script>
+    <br>
+
+    <div style="text-align:center;">
+    <input id="answer-element" type="range" min="1" max="5" step="1" style="width:200px; display:inline-block">
+    <br>
+    <br>
+    <input type="button" onclick="next_question()" id="next-button" value="Next">
+</div>
+
+<img src="images/2013-05-22 16.27.48.jpg" class="center-block img-responsive" alt="image" style="padding:100px;">
 </body>
 </html>
