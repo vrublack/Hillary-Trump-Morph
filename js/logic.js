@@ -6,11 +6,11 @@ var keys = Object.keys(questions);
 
 var category_i = 0;
 var question_i = 0;
-var current_q;
+var current_q = questions[keys[category_i]][question_i];
 
-var question_text = $('question-text');
-var category_text = $('category-text');
-var answer_element = $('answer-element');
+var question_text;
+var category_text;
+var answer_element;
 
 var next_question = function() {
 
@@ -30,13 +30,19 @@ var next_question = function() {
         category_text = keys[category_i];
     }
     current_q = questions[keys[category_i]][question_i];
-    question_text.innerHTML = current_q.q;
+    question_text.html(current_q.q);
 };
 
 var init = function()
 {
-    category_text = keys[category_i];
-    question_text = questions[keys[category_i]][question_i].q;
+    question_text = $('#question-text');
+    category_text = $('#category-text');
+    answer_element = $('#answer-element');
+
+    category_text.html(keys[category_i]);
+    console.log(questions[keys[category_i]][question_i].q);
+    console.log(question_text);
+    question_text.html(questions[keys[category_i]][question_i].q);
 };
 
 
@@ -61,6 +67,3 @@ var calculate_score = function()
 
     return clinton_sum - trump_sum;
 };
-
-// call for first question
-init();
